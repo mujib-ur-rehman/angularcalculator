@@ -8,20 +8,50 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angularcalculator';
   variable: number = 0;
-  sum(a: number, b: number) {
-    this.variable = a + b;
+  num1: number = 0;
+  num2: number = 0;
+  a: string = 'null';
+  b: string = 'null';
+  getValue() {
+    prompt('enter first value', this.a);
+    prompt('enter first value', this.b);
+  }
+  sum() {
+    this.getValue();
+    this.num1 = parseInt(this.a);
+    this.num2 = parseInt(this.b);
+
+    this.variable = this.num1 + this.num2;
     alert(this.variable);
   }
-  subtract(a: number, b: number) {
-    this.variable = a - b;
+  subtract() {
+    this.getValue();
+
+    this.num1 = parseInt(this.a);
+    alert(typeof this.num1);
+    this.num2 = parseInt(this.b);
+    alert(typeof this.num2);
+    this.variable = this.num1 - this.num2;
+    alert(this.num1 - this.num2);
+    alert(this.variable);
+    alert(typeof this.variable);
+  }
+  multiply() {
+    this.getValue();
+
+    this.num1 = parseInt(this.a);
+    this.num2 = parseInt(this.b);
+
+    this.variable = this.num1 * this.num2;
     alert(this.variable);
   }
-  multiply(a: number, b: number) {
-    this.variable = a * b;
-    alert(this.variable);
-  }
-  divide(a: number, b: number) {
-    this.variable = a / b;
+  divide() {
+    this.getValue();
+
+    this.num1 = parseInt(this.a);
+    this.num2 = parseInt(this.b);
+
+    this.variable = this.num1 / this.num2;
     alert(this.variable);
   }
 }
