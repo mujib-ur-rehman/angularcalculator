@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularcalculator';
+  variable: number = 0;
+  sum(a: number, b: number) {
+    this.variable = a + b;
+    alert(this.variable);
+  }
+  subtract(a: number, b: number) {
+    this.variable = a - b;
+    alert(this.variable);
+  }
+  multiply(a: number, b: number) {
+    this.variable = a * b;
+    alert(this.variable);
+  }
+  divide(a: number, b: number) {
+    this.variable = a / b;
+    alert(this.variable);
+  }
 }
