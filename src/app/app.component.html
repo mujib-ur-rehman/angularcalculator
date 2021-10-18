@@ -1,16 +1,23 @@
-<app-header></app-header>
-<h1>Calculator App</h1>
-<p>Input fisrt value:</p>
-<input type="text" #box1 (keyup.enter)="getfirstValue(box1.value)" />
-<br><br>
-<p>Input second value:</p>
-<input type="text" #box2 (keyup.enter)="getsecondValue(box2.value)" />
-<h2>Sum</h2>
-<button (click)="sum()">Sum</button>
-<h2>Subtract</h2>
-<button (click)="subtract()">Subtract</button>
-<h2>Multiply</h2>
-<button (click)="multiply()">Multiply</button>
-<h2>Division</h2>
-<button (click)="divide()">Divide</button>
-<app-footer></app-footer>
+<div>
+  <app-header></app-header>
+  <h1>Calculator App</h1>
+  <p>Input fisrt value:</p>
+  <input type="text" #box1 (keyup.enter)="getfirstValue(box1.value)" />
+  <br /><br />
+  <p>Input second value:</p>
+  <input type="text" #box2 (keyup.enter)="getsecondValue(box2.value)" />
+  <h2>Sum</h2>
+  <button mat-raised-button color="primary" (click)="sum()">Sum</button>
+  <h2>Subtract</h2>
+  <button mat-raised-button color="primary" (click)="subtract()">
+    Subtract
+  </button>
+  <h2>Multiply</h2>
+  <button mat-raised-button color="primary" (click)="multiply()">
+    Multiply
+  </button>
+  <h2>Division</h2>
+  <button mat-raised-button color="primary" (click)="divide()">Divide</button>
+
+  <app-footer></app-footer>
+</div>
